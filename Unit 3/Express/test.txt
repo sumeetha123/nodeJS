@@ -1,0 +1,7 @@
+{
+  "email": "ankit@lpu.com",
+  "name": "VishalPundhir",
+  "mobile": "8124420832",
+  "password": "abcdefghij",
+  "gender": "male"
+}
