@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blinking bulb</title>
+</head>
+
+<body>
+<button onclick="change()">Turn On/Off</button>
+<img id="myimage" src="pic_bulboff.gif" />
+<!-- <button onclick="change()">Turn off</button> -->
+
+<script>
+function change() {
+var image = document.getElementById("myimage");
+if (image.src.match("bulboff")) {
+image.src = "pic_bulbon.gif";
+} else image.src = "pic_bulboff.gif";
+}
+</script>
+</body>
+
+</html>

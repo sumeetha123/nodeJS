@@ -1,0 +1,23 @@
+<!-- Change the color of button on mouseover and mouseout -->
+<!-- Example of Event Handling using DOM -->
+<html>
+    <input type="button" value="Hover" id="btn"
+    onmouseover="changeColorOnMouseOver()"
+    onmouseout="changeColorOnMouseOut()"/>
+<script type="text/javascript">
+
+function changeColorOnMouseOver()
+{
+    document.getElementById("btn").style.background='red';
+    document.getElementById("btn").style.color='yellow';
+}
+function changeColorOnMouseOut()
+{
+    document.getElementById("btn").style.background='cadetblue';
+    document.getElementById("btn").style.color='white';
+}
+
+</script>
+
+
+</html>

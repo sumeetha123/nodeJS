@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2> Error Handling</h2>
+
+<p></p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+try {
+  fun1("10");
+}
+catch(err) {
+  document.getElementById("demo").innerHTML = err.message ;
+  document.getElementById("demo1").innerHTML = err.description ;
+  document.getElementById("demo2").innerHTML = err.stack ;
+}
+finally{
+  console.log("finally block");
+}
+
+</script>
+
+</body>
+</html>   

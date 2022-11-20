@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+
+</head>
+
+<body>
+<table>
+<tr>
+<td><button id="b1" onclick="myfunction(b1)">!</button></td>
+<td><button id="b2" onclick="myfunction(b2)">!</button></td>
+</tr>
+<tr>
+<td><button id="b3" onclick="myfunction(b3)">!</button></td>
+<td><button id="b4" onclick="myfunction(b4)">!</button></td>
+</tr>
+<tr>
+<td><button id="b5" onclick="setInterval(timer(),1000);">Start</button></td>
+<td>Countdown:<span id="count"></span></td>
+</tr>
+</table>
+<p id="Result"></p>
+
+<script>
+let flag=0;
+let arr = ["thumps up", "thumps down"];
+function myfunction(b) {
+console.log(b);
+if(flag==0){
+b.innerHTML = arr[Math.floor(Math.random() * arr.length)];
+if(b.innerHTML==arr[0]){
+document.getElementById("Result").innerHTML="YOU WON";
+}
+else{
+document.getElementById("Result").innerHTML="BETTER LUCK NEXT TIME!";
+}
+flag=1;
+}
+else{
+document.getElementById("Result").innerHTML="RELOAD PAGE";
+return;
+}
+}
+
+
+
+var intervalid;
+function timer() {
+document.getElementById("count").innerHTML = 10;
+intervalid= setInterval(func1, 1000);
+}
+function func1() {
+
+var t = document.getElementById("count");
+s = Number(t.innerHTML);
+console.log(s);
+if (s == 0) {
+clearInterval(intervalid);
+t.innerHTML = "Click one Button :/";
+
+}
+else {
+t.innerHTML = s - 1;
+}
+}
+
+
+</script>
+</body>
+
+</html>

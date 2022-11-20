@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<body style="text-align:center;">
+
+ <h1 style="color:Violet">
+  DEMO 
+ </h1>
+
+ <div class="test-btn">Button1</div>
+ <div class="test-btn">Button2</div>
+ <div class="test-btn">Button3</div>
+ <div class="test-btn">Button4</div>
+
+ <button onClick="qselector()">
+  querySelector
+ </button>
+
+ <button onClick="qselectorall()">
+  querySelectorAll
+ </button>
+
+ <script>
+  function qselector() {
+   document.querySelector(".test-btn")
+    .style.color = "pink";
+  }
+
+  function qselectorall() {
+   var x = document
+    .querySelectorAll(".test-btn");
+
+   for (var i = 0; i < x.length; i++) {
+    x[i].style.color = "yellow";
+   }
+  }
+ </script>
+</body>
+
+</html>

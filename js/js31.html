@@ -1,0 +1,27 @@
+<!-- AddEventListener Method  -->
+<!-- It attaches an event handler to specified element. -->
+<!-- SYntax -->
+<!-- element.addEventListener(event,function,useCapture) -->
+<!-- useCapture is the boolean value to use event bubbling or not -->
+
+<html>
+<input type="button" value="Hover" id="btn"/>
+<script  ipt">
+btn.addEventListener("mouseover", changeColorOnMouseOver);
+btn.addEventListener("mouseout", changeColorOnMouseOut);
+
+function changeColorOnMouseOver()
+{
+this.style.background='red';
+this.style.color='yellow';
+}
+function changeColorOnMouseOut()
+{
+this.style.background='cadetblue';
+this.style.color='white';
+}
+
+
+</script>
+
+</html>

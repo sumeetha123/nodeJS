@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+function abc() 
+{
+   try
+{
+    // Referencing a function that does not exist cause an exception
+    document.write(sayHello());
+    // Since the above line causes an exception, the following line will not be executed
+    document.write("This line will not be executed");
+}
+// When an exception occurs, the control is transferred to the catch block
+catch (e)
+{
+    document.write("Description = " + e.description + "<br/>");
+    document.write("Message = " + e.message + "<br/>");
+    document.write("Stack = " + e.stack + "<br/><br/>");
+}
+ }   
+</script>
+<head>
+<body>
+<input type="submit" onclick="abc()">
+</body>
+</html>

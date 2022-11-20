@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+</head>
+
+<body>
+
+    <!-- <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button> -->
+
+    <img id="myImage" src="bulb.gif" style="width:100px">
+
+    <button onclick="abc()">Turn off the light</button>
+    <script>
+        var a='bulb.gif';
+        var b='pic_bulbon.gif';
+       function abc(){
+        
+        var c = document.getElementById('myImage').src;
+        var d= c.localeCompare(a);
+    
+       if (d==1)
+        {
+            document.getElementById('myImage').src='pic_bulbon.gif';
+            a='pic_bulbon.gif';
+            b='bulb.gif';
+        }
+        else
+        {
+        document.getElementById('myImage').src='pic_bulboff.gif';
+        b='pic_bulbon.gif';
+        a='bulb.gif';
+        a=pic_bulboff.gif;
+        }
+    //    if (document.getElementById('myImage').src=='bulb.gif')
+    //     {
+    //        document.getElementById('myImage').src='pic_bulbon.gif';
+    //        //console.log("hi");
+        
+    //     }
+    //     else
+    //     //console.log("bye");
+    //   document.getElementById('myImage').src='pic_bulboff.gif';
+    }
+    </script>
+</body>
+
+</html>

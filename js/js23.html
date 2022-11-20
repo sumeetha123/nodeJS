@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function CanSubmit() {
+            //alert("ok");
+            var pwd = document.forms[0].txtPassword.value
+            //document.forms[0] means to return the id of the first form in the html document.
+            var cpwd = document.forms[0].txtConfirmPassword.value
+            if (pwd == cpwd)
+            {   alert("same passwd");
+                return true;}
+            else {
+                alert("Please make sure that Password and Confirm Password are Same");
+                return false;
+            }
+        }
+    </script>
+     
+    <form action="" method="post" onsubmit ="return CanSubmit()">
+    Password: <input type="password" name="txtPassword" value="" /> <br />
+    ConfirmPassword: <input type="password" name="txtConfirmPassword" value="" /> <br />
+    <input type="submit" name="btnSubmit" value="Submit" />
+    </form>
+</body>
+</html>

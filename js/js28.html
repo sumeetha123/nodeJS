@@ -1,0 +1,37 @@
+<html>
+<head>
+<script type="text/javascript">
+    var intervalId;
+
+    function startImageSlideShow() 
+    {
+        intervalId = setInterval(setImage, 1000);
+    }
+
+    function stopImageSlideShow() 
+    {
+        clearInterval(intervalId);
+    }
+
+    function setImage() 
+    {
+        var imageSrc = document.getElementById("image").getAttribute("src");
+        var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf("/") + 1,imageSrc.lastIndexOf("/") + 2);
+        //  var cu = imageSrc.substring(imageSrc.lastIndexOf("/") + 1,imageSrc.lastIndexOf("/") + 2);
+        //  console.log(cu);
+        if (currentImageNumber == 6) 
+        {
+            currentImageNumber = 0;
+        }
+        document.getElementById("image").setAttribute("src", "Images/"  +     (Number(currentImageNumber) + 1) + ".jfif");
+    }
+</script>
+</head>
+
+<body>
+<img id="image" src="./Images/1.jfif" style="width: 300px; height: 150px" />
+<br /> <br /> <br />
+<input type="button" value="Start Slide Show" onclick="startImageSlideShow()" />
+<input type="button" value="Stop Slide Show" onclick="stopImageSlideShow()" />
+</body>
+</html>
